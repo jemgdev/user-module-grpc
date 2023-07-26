@@ -39,10 +39,6 @@ export default class UserPrismaRepository implements UserPersistanceRepository {
       message: 'Send userId'
     })
 
-    call.on('data', (chunk) => {
-      console.error(chunk)
-    })
-
     call.on('error', (error) => {
       console.error(error.message)
     })
