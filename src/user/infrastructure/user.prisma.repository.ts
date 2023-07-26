@@ -35,7 +35,12 @@ export default class UserPrismaRepository implements UserPersistanceRepository {
     const call = grpcClient.CreateItem(metadata)
 
     call.write({
-      userId
+      userId,
+      message: 'Send userId'
+    })
+
+    call.on('data', (chunk) => {
+      console.error(chunk)
     })
 
     call.on('error', (error) => {
