@@ -1,11 +1,11 @@
 import * as grpc from '@grpc/grpc-js'
-import PrismaConnection from "../../prisma/prisma.connection"
+import PrismaConnection from "../../../prisma/prisma.connection"
 import CreateUserModel from "../domain/create.user.model"
 import UserModel from "../domain/user.model"
 import UserPersistanceRepository from "../domain/user.persistance.respository"
 import { v4 as uuid } from 'uuid'
 import grpcClient from "./client.grpc"
-import UnavailableError from '../../utils/custom-errors/infrastructure-errors/unavailable.error'
+import UnavailableError from '../../../utils/custom-errors/infrastructure-errors/unavailable.error'
 
 const prisma = new PrismaConnection().connection
 

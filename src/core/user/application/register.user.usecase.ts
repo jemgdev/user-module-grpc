@@ -1,4 +1,4 @@
-import BadRequestError from "../../utils/custom-errors/application-errors/bad.request.error"
+import BadRequestError from "../../../utils/custom-errors/application-errors/bad.request.error"
 import CreateUserModel from "../domain/create.user.model"
 import UserModel from "../domain/user.model"
 import UserPersistanceRepository from "../domain/user.persistance.respository"

@@ -2,9 +2,9 @@ import { NextFunction, Request, Response } from 'express'
 import ResponseModel from '../utils/standar-response/response.model'
 import { ResponseStatusCodes } from '../utils/standar-response/response.status.codes'
 import { ResponseCodes } from '../utils/standar-response/response.codes'
-import RegisterUserUseCase from '../user/application/register.user.usecase'
-import UserPrismaRepository from '../user/infrastructure/user.prisma.repository'
-import ListUsersUseCase from '../user/application/list.users.usecase'
+import RegisterUserUseCase from '../core/user/application/register.user.usecase'
+import UserPrismaRepository from '../core/user/infrastructure/user.prisma.repository'
+import ListUsersUseCase from '../core/user/application/list.users.usecase'
 
 const userRepository = new UserPrismaRepository()
 

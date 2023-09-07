@@ -8,6 +8,7 @@ import { ResponseStatusCodes } from './utils/standar-response/response.status.co
 import notFound from './middlewares/notFound'
 import responseError from './middlewares/responseError'
 import userRouter from './routes/user.routes'
+import addressRouter from './routes/address.routes'
 dotenv.config()
 
 const app = express()
@@ -28,6 +29,7 @@ const home = async (_request: Request, response: Response): Promise<void> => {
 app.get('/', home)
 
 app.use('/api/v1/users', userRouter)
+app.use('/api/v1/address', addressRouter)
 
 app.use(notFound)
 app.use(responseError)
